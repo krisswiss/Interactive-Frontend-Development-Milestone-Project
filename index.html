@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arts Antenne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+   <!-----   Filters   ----->
+
+   <select id="country">
+     <option value="all" selected>All</option>
+     <option value="at">Austria</option>
+     <option value="be">Belgium</option>
+     <option value="cz">Czech</option>
+     <option value="fr">France</option>
+     <option value="de">Germany</option>
+     <option value="gr">Greece</option>
+     <option value="it">Italy</option>
+     <option value="ie">Ireland</option>
+     <option value="nl">Netherlands</option>
+     <option value="pl">Poland</option>
+     <option value="pt">Portugal</option>
+     <option value="sk">Slovakia</option>
+     <option value="es">Spain</option>
+   </select>
+
+   <input placeholder="Enter a city" type="text">
+
+   <form>
+     <input type="radio" name="type" value="Art">
+     <span class="radio-text">Art</span>
+     <input type="radio" name="type" value="Live Music">
+     <span class="radio-text">Live Music</span>
+     <input type="radio" name="type" value="Films">
+     <span class="radio-text">Films</span>
+     <input type="radio" name="type" value="Museums">
+     <span class="radio-text">Museums</span>
+     <input type="radio" name="type" value="Libraries">
+     <span class="radio-text">Libraries</span>
+   </form>
+
+   <!-----   Map   ----->
+   
+   <div id="map"></div>
+
+   <!-----   Scripts   ---->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRS9s-gCLVrQOvE0rkJsFGARJjXt0cdB8&callback=initMap"
+    async defer></script>
+    
+
+</body>
+
+</html>
