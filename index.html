@@ -13,9 +13,13 @@
 </head>
 
 <body>
+   <section id="home">
 
+   <div class="container-fluid">
+     <div class="row">
    <!-----   Filters   ----->
-
+   
+   <div class="col-sm-5">
    <select id="country">
      <option value="all" selected>All</option>
      <option value="at">Austria</option>
@@ -33,11 +37,13 @@
      <option value="es">Spain</option>
    </select>
 
-   <input placeholder="Enter a city" type="text">
-
+   <input placeholder="Enter a city" type="text" id="enterCity">
+   
    <form>
-     <input type="radio" name="type" value="Art">
+     <input type="radio" name="type" value="Art" checked="checked">
      <span class="radio-text">Art</span>
+     <input type="radio" name="type" value="Theatre">
+     <span class="radio-text">Theatre</span>
      <input type="radio" name="type" value="Live Music">
      <span class="radio-text">Live Music</span>
      <input type="radio" name="type" value="Films">
@@ -48,9 +54,18 @@
      <span class="radio-text">Libraries</span>
    </form>
 
+   </div>
+
    <!-----   Map   ----->
    
-   <div id="map"></div>
+       <div class="col-sm-7">
+         <div id="map"></div>
+       </div>    
+
+     </div>
+   </div>
+
+   </section>
 
    <!-----   Scripts   ---->
 
@@ -61,7 +76,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRS9s-gCLVrQOvE0rkJsFGARJjXt0cdB8&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRS9s-gCLVrQOvE0rkJsFGARJjXt0cdB8&libraries=places&callback=initMap"
     async defer></script>
     
 
