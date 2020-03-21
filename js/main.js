@@ -15,64 +15,64 @@
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
       var countries = {
-        'au': {
-          center: {lat: -25.3, lng: 133.8},
+          'at': {
+          center: {lat: 47.52, lng: 14.55},
           zoom: 4
         },
-        'br': {
-          center: {lat: -14.2, lng: -51.9},
-          zoom: 3
-        },
-        'ca': {
-          center: {lat: 62, lng: -110.0},
-          zoom: 3
-        },
-        'fr': {
-          center: {lat: 46.2, lng: 2.2},
-          zoom: 5
-        },
-        'de': {
-          center: {lat: 51.2, lng: 10.4},
-          zoom: 5
-        },
-        'mx': {
-          center: {lat: 23.6, lng: -102.5},
+          'be': {
+          center: {lat: 50.50, lng: 4.47},
           zoom: 4
         },
-        'nz': {
-          center: {lat: -40.9, lng: 174.9},
-          zoom: 5
+          'cz': {
+          center: {lat: 49.82, lng: 15.48},
+          zoom: 4
         },
-        'it': {
-          center: {lat: 41.9, lng: 12.6},
-          zoom: 5
+          'fr': {
+          center: {lat: 46.23, lng: 2.21},
+          zoom: 4
         },
-        'za': {
-          center: {lat: -30.6, lng: 22.9},
-          zoom: 5
+          'de': {
+          center: {lat: 51.16, lng: 10.45},
+          zoom: 4
         },
-        'es': {
-          center: {lat: 40.5, lng: -3.7},
-          zoom: 5
+          'gr': {
+          center: {lat: 39.07, lng: 21.82},
+          zoom: 4
         },
-        'pt': {
-          center: {lat: 39.4, lng: -8.2},
-          zoom: 6
+          'it': {
+          center: {lat: 41.87, lng: 12.57},
+          zoom: 4
         },
-        'us': {
-          center: {lat: 37.1, lng: -95.7},
-          zoom: 3
+          'ie': {
+          center: {lat: 53.41, lng: -8.24},
+          zoom: 4
         },
-        'uk': {
-          center: {lat: 54.8, lng: -4.6},
-          zoom: 5
-        }
+          'nl': {
+          center: {lat: 52.13, lng: 5.29},
+          zoom: 4
+        },
+          'pl': {
+          center: {lat: -51.92, lng: 19.14},
+          zoom: 4
+        },
+          'pt': {
+          center: {lat: 39.40, lng: -8.22},
+          zoom: 4
+        },
+          'sk': {
+          center: {lat: 48.67, lng: 19.70},
+          zoom: 4
+        },
+          'es': {
+          center: {lat: 40.46, lng: -3.75},
+          zoom: 4
+        },
       };
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: countries['us'].zoom,
-          center: countries['us'].center,
+          zoom: 2,
+          center: countries['ie'].center,
           mapTypeControl: false,
           panControl: false,
           zoomControl: false,
