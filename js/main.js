@@ -1,71 +1,62 @@
-      // This example uses the autocomplete feature of the Google Places API.
-      // It allows the user to find all hotels in a given place, within a given
-      // country. It then displays markers for all the hotels returned,
-      // with on-click details for each hotel.
-
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
       var map, places, infoWindow;
       var markers = [];
       var autocomplete;
-      var countryRestrict = {'country': 'us'};
+      var countryRestrict = {'country': [] };
       var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
       var countries = {
           'at': {
-          center: {lat: 47.52, lng: 14.55},
-          zoom: 4
+          center: {lat: 47.5, lng: 14.5},
+          zoom: 6
         },
           'be': {
-          center: {lat: 50.50, lng: 4.47},
-          zoom: 4
+          center: {lat: 50.5, lng: 4.5},
+          zoom: 7
         },
           'cz': {
-          center: {lat: 49.82, lng: 15.48},
-          zoom: 4
+          center: {lat: 49.8, lng: 15.5},
+          zoom: 6
         },
           'fr': {
-          center: {lat: 46.23, lng: 2.21},
-          zoom: 4
+          center: {lat: 46.2, lng: 2.2},
+          zoom: 5
         },
           'de': {
-          center: {lat: 51.16, lng: 10.45},
-          zoom: 4
+          center: {lat: 51.2, lng: 10.4},
+          zoom: 5
         },
           'gr': {
-          center: {lat: 39.07, lng: 21.82},
-          zoom: 4
+          center: {lat: 39.1, lng: 21.8},
+          zoom: 5
         },
           'it': {
-          center: {lat: 41.87, lng: 12.57},
-          zoom: 4
+          center: {lat: 41.9, lng: 12.6},
+          zoom: 5
         },
           'ie': {
-          center: {lat: 53.41, lng: -8.24},
-          zoom: 4
+          center: {lat: 53.4, lng: -8.2},
+          zoom: 7
         },
           'nl': {
-          center: {lat: 52.13, lng: 5.29},
-          zoom: 4
+          center: {lat: 52.1, lng: 5.3},
+          zoom: 7
         },
           'pl': {
-          center: {lat: -51.92, lng: 19.14},
-          zoom: 4
+          center: {lat: 51.9, lng: 19.1},
+          zoom: 5
         },
           'pt': {
-          center: {lat: 39.40, lng: -8.22},
-          zoom: 4
+          center: {lat: 39.4, lng: -8.2},
+          zoom: 5
         },
           'sk': {
-          center: {lat: 48.67, lng: 19.70},
-          zoom: 4
+          center: {lat: 48.7, lng: 19.7},
+          zoom: 6
         },
           'es': {
-          center: {lat: 40.46, lng: -3.75},
-          zoom: 4
+          center: {lat: 40.5, lng: -3.7},
+          zoom: 5
         },
       };
 
