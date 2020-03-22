@@ -2,8 +2,12 @@
        * element that contains the map. */
       #map {
         height: 100%;
+        margin: 0 !important;
       }
-      /* Optional: Makes the sample page fill the window. */
+      #map-container {
+          min-height: 500px !important;
+      }
+      /* Optional: Makes the sample page fill the window. 
       html, body {
         height: 100%;
         margin: 0;
@@ -11,7 +15,7 @@
       }
       body {
         padding: 0 !important;
-      }
+      } */
       table {
         font-size: 12px;
       }

@@ -28,7 +28,7 @@
         },
           'gr': {
           center: {lat: 39.1, lng: 21.8},
-          zoom: 5
+          zoom: 6
         },
           'it': {
           center: {lat: 41.9, lng: 12.6},
@@ -48,7 +48,7 @@
         },
           'pt': {
           center: {lat: 39.4, lng: -8.2},
-          zoom: 5
+          zoom: 7
         },
           'sk': {
           center: {lat: 48.7, lng: 19.7},

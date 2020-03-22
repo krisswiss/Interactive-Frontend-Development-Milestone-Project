@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Arts Antenne</title>
+    <title>Arts Antennae</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,6 +14,23 @@
 
 <body>
 
+    <!-----   Nav   --------------------------------------------------------------------------->
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Arts Antennae</a>
+    </nav>
+
+    <!-----   Content   --------------------------------------------------------------------------->
+
+    <section class="content">
+
+    <div class="container-fluid">
+    <div class="row no-gutters">
+    
+    <div class="col-sm-5">
+    
     <div class="hotel-search">
       <div id="findhotels">
         Find hotels in:
@@ -28,7 +45,7 @@
           <option value="all" selected>All</option>
           <option value="at">Austria</option>
           <option value="be">Belgium</option>
-          <option value="cz">Czech</option>
+          <option value="cz">Czech Republic</option>
           <option value="fr">France</option>
           <option value="de">Germany</option>
           <option value="gr">Greece</option>
@@ -42,9 +59,21 @@
         </select>
       </div>
     </div>
-
+    </div>
+    
+    <!----- Map ----->
+    <div class="col-sm-7" id="map-container">
     <div id="map"></div>
+    </div>
 
+    </div>
+    </div>
+
+    </section>
+
+    <!-----   Results table   --------------------------------------------------------------------------->
+  
+    <section class="results">
     <div id="listing">
       <table id="resultsTable">
         <tbody id="results"></tbody>
@@ -77,6 +106,111 @@
         </table>
       </div>
     </div>
+    </section>
+
+    <!-----   Footer   ----------------------------------------------------------------------->
+
+      <!----- credit for the footer: Code Institute - see MD file ----->
+
+    <footer class="container-fluid follow" id="follow">
+        <div id="footer-details" class="row">
+
+            <!----- Copyright ---->
+            <div class="col-lg-4">
+                <h5 class="uppercase general-sub">Copyright</h5>
+                <hr>
+                <p class="inline-block"><i class="fa fa-copyright" aria-hidden="true"></i>2020 Chris Swiatek. All rights reserved.
+                </p>
+                <p>Unofficial Fan Website for Die Antwoord.</p>
+
+            </div>
+
+            <!----- Contact ---->
+            <div class="col-lg-4">
+                <h5 class="uppercase general-sub">Contact</h5>
+                <hr>
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-6 contact-grid">
+                            <p class="inline-block" id="wanna-help">
+                                Wanna help?
+                            </p>
+                        </div>
+                        
+                        <!--- Contact MODAL--->
+                        
+                        <div class="col-6 contact-grid">
+                          <button class="btn btn-primary" id="contact-button" data-toggle="modal" data-target="#booking-modal">Get in touch</button>
+                          <div class="modal fade" id="booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                              <div class="modal-content">
+                                <button type="button" class="btn btn-primary close" data-dismiss="modal">X</button>
+                                <div class="modal-body">
+                                  <div class="justify-content-center">
+                                  
+                                    <form class="booking-form">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Name" required/>
+                                      </div>
+                                      <div>
+                                        <input type="email" required name="email" class="form-control" id="email" placeholder="Email"/> 
+                                      </div>
+                                      <div class="form-group">
+                                        <textarea class="form-control" id="enquiry" rows="8" placeholder="Message" required></textarea>
+                                      </div>
+                                      <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Send</button>
+                                      </div>
+                                    </form>
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!----- Social Links ----->
+
+            <div class="col-lg-4">
+                <h5 class="uppercase general-sub">Follow</h5>
+                <hr>
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/DieAntwoord/">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://twitter.com/dieantwoord">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/dieantwoord/">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.youtube.com/channel/UC6DicDItkLQ7N4ag1JS5mqg">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                            <span class="sr-only">YouTube</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
 
 
    <!-----   Scripts   ---->
