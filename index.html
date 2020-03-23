@@ -16,8 +16,7 @@
 
     <!-----   Nav   --------------------------------------------------------------------------->
 
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
-
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Arts Antennae</a>
     </nav>
@@ -29,18 +28,27 @@
     <div class="container-fluid">
     <div class="row no-gutters">
     
+    <!-----   Filters   ----->
     <div class="col-sm-5">
-    
-    <div class="hotel-search">
-      <div id="findhotels">
-        Find hotels in:
-      </div>
 
-      <div id="locationField">
-        <input id="autocomplete" placeholder="Enter a city" type="text" />
+    <div class="row">
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-primary" id="findMe">Find me</button>
       </div>
+    </div>
 
-      <div id="controls">
+    <div class="row">
+      <div class="col-sm-12">OR
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">Select country:
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
         <select id="country">
           <option value="all" selected>All</option>
           <option value="at">Austria</option>
@@ -59,11 +67,66 @@
         </select>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        City:
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <input id="autocomplete" placeholder="Enter a city" type="text" />
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-sm-12">
+        Category:
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <form>
+          <input type="radio" name="option" value="all" id="allArts">
+          <span class="radio-buttons">All</span>
+          <br>
+          <input type="radio" name="option" value="film" id="film">
+          <span class="radio-buttons">Film</span>
+          <br>
+          <input type="radio" name="option" value="music" id="music">
+          <span class="radio-buttons">Music</span>
+          <br>
+          <input type="radio" name="option" value="theatre" id="theatre">
+          <span class="radio-buttons">Theatre</span>
+          <br>
+          <input type="radio" name="option" value="museum" id="museum">
+          <span class="radio-buttons">Museum</span>
+          <br>
+          <input type="radio" name="option" value="library" id="Library">
+          <span class="radio-buttons">Library</span>
+          <br>
+          <input type="radio" name="option" value="gallery" id="gallery">
+          <span class="radio-buttons">Gallery</span>
+          <br>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-primary" id="reset">Reset</button>
+      </div>
+    </div>
+
+    </div>
+    <!--- ^^^   Filters close   ^^^ --->
+    
     
     <!----- Map ----->
     <div class="col-sm-7" id="map-container">
-    <div id="map"></div>
+      <div id="map"></div>
     </div>
 
     </div>
@@ -73,7 +136,11 @@
 
     <!-----   Results table   --------------------------------------------------------------------------->
   
-    <section class="results">
+    <section class="results container-fluid">
+
+    <div class="row">
+    <div class="col-sm-12">
+
     <div id="listing">
       <table id="resultsTable">
         <tbody id="results"></tbody>
@@ -106,6 +173,9 @@
         </table>
       </div>
     </div>
+    </div>
+    </div>
+
     </section>
 
     <!-----   Footer   ----------------------------------------------------------------------->
@@ -121,8 +191,6 @@
                 <hr>
                 <p class="inline-block"><i class="fa fa-copyright" aria-hidden="true"></i>2020 Chris Swiatek. All rights reserved.
                 </p>
-                <p>Unofficial Fan Website for Die Antwoord.</p>
-
             </div>
 
             <!----- Contact ---->
