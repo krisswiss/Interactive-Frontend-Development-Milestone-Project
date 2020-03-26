@@ -61,6 +61,7 @@
       };
 
       function initMap() {
+        $("#artGallery").prop("checked", true);
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: countries['ie'].center,
@@ -85,6 +86,10 @@
         places = new google.maps.places.PlacesService(map);
 
         autocomplete.addListener('place_changed', onPlaceChanged);
+        document.getElementById('artGallery').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('movieTheatre').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('museum').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('library').addEventListener('change', setAutocompleteCountry);
 
         // Add a DOM event listener to react when the user selects a country.
         document.getElementById('country').addEventListener(
@@ -94,28 +99,61 @@
       // When the user selects a city, get the place details for the city and
       // zoom the map in on the city.
       function onPlaceChanged() {
+        if ($("#artGallery").is(':checked')) {
         var place = autocomplete.getPlace();
         if (place.geometry) {
           map.panTo(place.geometry.location);
           map.setZoom(15);
-          search();
+          searchArtGallery();
         } else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
+      else if ($("#movieTheatre").is(':checked')) {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(15);
+          searchMovieTheatre();
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
+        }
+      }
+      else if ($("#museum").is(':checked')) {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(15);
+          searchMuseum();
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
+        }
+      }
+      else if ($("#library").is(':checked')) {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(15);
+          searchLibrary();
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
+        }
+      }
+      }
 
-      // Search for hotels in the selected city, within the viewport of the map.
-      function search() {
+    
+      // Search for Art Galleries in the selected city, within the viewport of the map.
+      function searchArtGallery() {
         var search = {
           bounds: map.getBounds(),
-          types: ['lodging']
+          types: ['art_gallery']
         };
 
         places.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
-            // Create a marker for each hotel found, and
+            // Create a marker for each Gallery found, and
             // assign a letter of the alphabetic to each marker icon.
             for (var i = 0; i < results.length; i++) {
               var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
@@ -126,7 +164,7 @@
                 animation: google.maps.Animation.DROP,
                 icon: markerIcon
               });
-              // If the user clicks a hotel marker, show the details of that hotel
+              // If the user clicks a Gallery marker, show the details of that Gallery
               // in an info window.
               markers[i].placeResult = results[i];
               google.maps.event.addListener(markers[i], 'click', showInfoWindow);
@@ -137,6 +175,105 @@
         });
       }
 
+      // Search for Movie Theatres in the selected city, within the viewport of the map.
+      function searchMovieTheatre() {
+        var search = {
+          bounds: map.getBounds(),
+          types: ['movie_theater']
+        };
+
+        places.nearbySearch(search, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            clearResults();
+            clearMarkers();
+            // Create a marker for each Movie Theatre found, and
+            // assign a letter of the alphabetic to each marker icon.
+            for (var i = 0; i < results.length; i++) {
+              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
+              // Use marker animation to drop the icons incrementally on the map.
+              markers[i] = new google.maps.Marker({
+                position: results[i].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: markerIcon
+              });
+              // If the user clicks Movie Theatre marker, show the details of that Theatre
+              // in an info window.
+              markers[i].placeResult = results[i];
+              google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+              setTimeout(dropMarker(i), i * 100);
+              addResult(results[i], i);
+            }
+          }
+        });
+      }
+
+      // Search for Museums in the selected city, within the viewport of the map.
+      function searchMuseum() {
+        var search = {
+          bounds: map.getBounds(),
+          types: ['museum']
+        };
+
+        places.nearbySearch(search, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            clearResults();
+            clearMarkers();
+            // Create a marker for each Museum found, and
+            // assign a letter of the alphabetic to each marker icon.
+            for (var i = 0; i < results.length; i++) {
+              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
+              // Use marker animation to drop the icons incrementally on the map.
+              markers[i] = new google.maps.Marker({
+                position: results[i].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: markerIcon
+              });
+              // If the user clicks Museum marker, show the details of that Museum
+              // in an info window.
+              markers[i].placeResult = results[i];
+              google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+              setTimeout(dropMarker(i), i * 100);
+              addResult(results[i], i);
+            }
+          }
+        });
+      }
+
+      // Search for Libraries in the selected city, within the viewport of the map.
+      function searchLibrary() {
+        var search = {
+          bounds: map.getBounds(),
+          types: ['library']
+        };
+
+        places.nearbySearch(search, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            clearResults();
+            clearMarkers();
+            // Create a marker for each Library found, and
+            // assign a letter of the alphabetic to each marker icon.
+            for (var i = 0; i < results.length; i++) {
+              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
+              // Use marker animation to drop the icons incrementally on the map.
+              markers[i] = new google.maps.Marker({
+                position: results[i].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: markerIcon
+              });
+              // If the user clicks Library marker, show the details of that Library
+              // in an info window.
+              markers[i].placeResult = results[i];
+              google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+              setTimeout(dropMarker(i), i * 100);
+              addResult(results[i], i);
+            }
+          }
+        });
+      }
+      
       function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
           if (markers[i]) {
@@ -169,6 +306,7 @@
         };
       }
 
+      // Results table
       function addResult(result, i) {
         var results = document.getElementById('results');
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
@@ -201,8 +339,8 @@
         }
       }
 
-      // Get the place details for a hotel. Show the information in an info window,
-      // anchored on the marker for the hotel that the user selected.
+      // Get details for a place. Show the information in an info window,
+      // anchored on the marker for the place that the user selected.
       function showInfoWindow() {
         var marker = this;
         places.getDetails({placeId: marker.placeResult.place_id},
@@ -264,3 +402,17 @@
           document.getElementById('iw-website-row').style.display = 'none';
         }
       }
+
+        // Reset button to clear selection and reset the map to initMap state
+        function reset() {
+         clearResults();
+         clearMarkers();
+         $('#country')[0].selectedIndex = 0;
+         $("#autocomplete").val("");
+         $('#results-heading').html("");
+         map.setZoom(2);
+         map.setCenter(countries["ie"].center);
+         map.componentRestrictions = { 'country': [] };
+         place = "";
+         $("#artGallery").prop("checked", true);
+        }
