@@ -68,7 +68,8 @@
           mapTypeControl: false,
           panControl: false,
           zoomControl: false,
-          streetViewControl: false
+          streetViewControl: false,
+          componentRestrictions: countryRestrict,
         });
 
         infoWindow = new google.maps.InfoWindow({
@@ -86,10 +87,10 @@
         places = new google.maps.places.PlacesService(map);
 
         autocomplete.addListener('place_changed', onPlaceChanged);
-        document.getElementById('artGallery').addEventListener('change', setAutocompleteCountry);
-        document.getElementById('movieTheatre').addEventListener('change', setAutocompleteCountry);
-        document.getElementById('museum').addEventListener('change', setAutocompleteCountry);
-        document.getElementById('library').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('artGallery').addEventListener('change', onPlaceChanged);
+        document.getElementById('movieTheatre').addEventListener('change', onPlaceChanged);
+        document.getElementById('museum').addEventListener('change', onPlaceChanged);
+        document.getElementById('library').addEventListener('change', onPlaceChanged);
 
         // Add a DOM event listener to react when the user selects a country.
         document.getElementById('country').addEventListener(
@@ -138,7 +139,7 @@
         } else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
-      }
+       }
       }
 
     
