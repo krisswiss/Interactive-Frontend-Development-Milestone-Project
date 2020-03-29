@@ -69,7 +69,6 @@
           panControl: false,
           zoomControl: false,
           streetViewControl: false,
-          componentRestrictions: countryRestrict,
         });
 
         infoWindow = new google.maps.InfoWindow({
@@ -93,8 +92,8 @@
         document.getElementById('library').addEventListener('change', onPlaceChanged);
 
         // Add a DOM event listener to react when the user selects a country.
-        document.getElementById('country').addEventListener(
-            'change', setAutocompleteCountry);
+        document.getElementById('country').addEventListener('change', setAutocompleteCountry);
+        document.getElementById('reset').addEventListener('click', setAutocompleteCountry);
       }
 
       // When the user selects a city, get the place details for the city and
