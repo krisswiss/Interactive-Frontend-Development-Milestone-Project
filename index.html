@@ -39,7 +39,7 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-primary" id="findMe" onclick="findMe()">Find me</button>
+        <button type="button" class="btn btn-primary" id="findMe">Find me</button>
       </div>
     </div>
 
@@ -94,7 +94,7 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <form>
+        <form action="">
           <input type="radio" name="option" value="gallery" id="artGallery">
           <span class="radio-buttons">Art Gallery</span>
           <br>
@@ -205,7 +205,7 @@
                         
                         <!--- Contact MODAL--->
                         
-                        <div class="col-6 contact-grid" onsubmit="return sendMail(this);">
+                        <div class="col-6 contact-grid">
                           <button class="btn btn-primary" id="contact-button" data-toggle="modal" data-target="#booking-modal">Get in touch</button>
                           <div class="modal fade" id="booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
@@ -214,7 +214,7 @@
                                 <div class="modal-body">
                                   <div class="justify-content-center">
                                   
-                                    <form class="booking-form">
+                                    <form class="booking-form" onsubmit="return sendMail(this);">
                                       <div class="form-group">
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Name" required/>
                                       </div>
