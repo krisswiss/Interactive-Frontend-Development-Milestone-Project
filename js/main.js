@@ -414,7 +414,6 @@
          map.setCenter(countries["ie"].center);
          map.componentRestrictions = { 'country': [] };
          place = "";
-         $("#artGallery").prop("checked", true);
         }
 
 
@@ -435,13 +434,13 @@ function findMe() {
             map.setZoom(13);
 
             if ($("#artGallery").is(':checked')) {
-              searchArtGallery();
+            searchArtGallery();
             } else if ($("#movieTheatre").is(':checked')) {
-              searchMovieTheatre();
+            searchMovieTheatre();
             } else if ($("#museum").is(':checked')) {
-              searchMuseum();
+            searchMuseum();
             } else if ($("#library").is(':checked')) {
-              searchLibrary();
+            searchLibrary();
             }
 
         }, function () {
