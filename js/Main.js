@@ -86,12 +86,13 @@
         places = new google.maps.places.PlacesService(map);
 
         autocomplete.addListener('place_changed', onPlaceChanged);
-        document.getElementById('artGallery').addEventListener('change', onPlaceChanged);
-        document.getElementById('movieTheatre').addEventListener('change', onPlaceChanged);
-        document.getElementById('museum').addEventListener('change', onPlaceChanged);
-        document.getElementById('library').addEventListener('change', onPlaceChanged);
+        document.getElementById('artGallery').addEventListener('change', searchArtGallery);
+        document.getElementById('movieTheatre').addEventListener('change', searchMovieTheatre);
+        document.getElementById('museum').addEventListener('change', searchMuseum);
+        document.getElementById('library').addEventListener('change', searchLibrary);
 
         // Add a DOM event listener to react when the user selects a country.
+        document.getElementById('findMe').addEventListener('click', findMe);
         document.getElementById('country').addEventListener('change', setAutocompleteCountry);
         document.getElementById('reset').addEventListener('click', setAutocompleteCountry);
       }
@@ -414,6 +415,7 @@
          map.setCenter(countries["ie"].center);
          map.componentRestrictions = { 'country': [] };
          place = "";
+         $("#artGallery").prop("checked", true);
         }
 
 
