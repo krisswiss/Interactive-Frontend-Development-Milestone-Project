@@ -69,6 +69,7 @@
           panControl: false,
           zoomControl: false,
           streetViewControl: false,
+          gestureHandling: 'cooperative'
         });
 
         infoWindow = new google.maps.InfoWindow({
