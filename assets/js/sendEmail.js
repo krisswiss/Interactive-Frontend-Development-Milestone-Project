@@ -1,4 +1,5 @@
 function sendMail(contactForm) {
+    
     emailjs.send("gmail", "arts_antennae", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
@@ -7,10 +8,18 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
+            hideModalOnSubmit(contactForm);
         },
         function(error) {
             console.log("FAILED", error);
         }
     );
     return false;
+}
+
+function hideModalOnSubmit(contactForm) {
+    $('#booking-modal').modal('hide');
+    contactForm.name.value = null;
+    contactForm.emailaddress.value = null;
+    contactForm.message.value = null;
 }
