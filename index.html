@@ -22,7 +22,7 @@
 
     <!-----   Nav   --------------------------------------------------------------------------->
 
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark <!---fixed-top---> justify-content-center">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark justify-content-center">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Arts Antennae</a>
     </nav>
@@ -32,10 +32,10 @@
     <section class="content">
 
     <div class="container-fluid">
-    <div class="row no-gutters">
+    <div class="row">
     
     <!-----   Filters   ----->
-    <div class="col-sm-5">
+    <div class="col-sm-12 col-md-4" id="filterWrapper">
 
     <div class="row">
       <div class="col-sm-12">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12">OR
+      <div class="col-sm-12" id="or">Or
       </div>
     </div>
 
@@ -87,13 +87,13 @@
     </div>
  
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12" id="category">
         Category:
       </div>
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12" id="radioButtons">
         <form action="">
           <input type="radio" name="option" value="gallery" id="artGallery">
           <span class="radio-buttons">Art Gallery</span>
@@ -112,7 +112,7 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12" id="resetWrapper">
         <button type="button" class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
       </div>
     </div>
@@ -122,7 +122,7 @@
     
     
     <!----- Map ----->
-    <div class="col-sm-7" id="map-container">
+    <div class="col-sm-12 col-md-8" id="mapContainer">
       <div id="map"></div>
     </div>
 

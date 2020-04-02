@@ -1,42 +1,77 @@
-      @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap'); /*Cinzel Decorative*/
+   @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap'); /*Cinzel Decorative*/
       @import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
 
-      body {
+    body {
     font-family: 'Roboto', cursive, sans-serif;
     font-weight: bold;
-    font-size: 2em;
-}
-      
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      #map-container {
-          min-height: 500px !important;
-      }
+    }
+
+    .navbar-dark {
+        background-color: #197330 !important;
+    }
+    
+    /*-------- Content -----------*/
+    .content {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: url('../images/general-bg2.jpg') no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 23px;
+    }
+
+    #filterWrapper {
+        padding-left: 65px;
+        padding-right: 100px;
+    }
+
+    #findMe {
+        width: 100%;
+    }
+
+    .btn {
+        background-color: #17a2b8;
+    }
+
+    #or {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 7px;
+    }
+
+    #category {
+        padding-top: 35px;
+    }
+
+    #radioButtons {
+        padding-bottom: 20px;
+    }
+
+    #reset {
+        width: 100%;
+    }
+
+    #resetWrapper {
+        padding-bottom: 40px;
+    }
+
+    #mapContainer {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    #map {
+        min-height: 500px !important;
+    }
+
+      /*------------ Results table ------------------*/
       table {
         font-size: 12px;
       }
-      
-      /*
-      .hotel-search {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 440px;
-        z-index: 1;
       }
-      */
 
-      }
       #listing {
         position: absolute;
         width: 200px;
@@ -47,24 +82,6 @@
         cursor: pointer;
         overflow-x: hidden;
       }
-      /*
-      #findhotels {
-        font-size: 14px;
-      }
-      
-      #locationField {
-        -webkit-box-flex: 1 1 190px;
-        -ms-flex: 1 1 190px;
-        flex: 1 1 190px;
-        margin: 0 8px;
-      }
-      
-      #controls {
-        -webkit-box-flex: 1 1 140px;
-        -ms-flex: 1 1 140px;
-        flex: 1 1 140px;
-      }
-      */
 
       #autocomplete {
         width: 100%;
@@ -101,13 +118,9 @@
       }
 
 
-    
-    .content {
-    min-height: 100vh;
-    background: url('../images/general-bg2.jpg') no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-} 
+  /*-------- Footer -----------*/
+
+
+ #follow {
+     background-color: #197330;
+ }

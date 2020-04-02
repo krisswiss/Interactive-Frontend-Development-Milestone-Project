@@ -65,7 +65,8 @@
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: countries['ie'].center,
-          mapTypeControl: false,
+          //mapTypeControl: false,
+          mapTypeId: 'satellite',
           panControl: false,
           zoomControl: false,
           streetViewControl: false,
@@ -424,14 +425,16 @@
 function findMe() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
+            var markerIcon = MARKER_PATH + '.png';
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
+            function myLocationMarker(position) {
+                markerIcon(pos);
+            }
+
             map.setCenter(pos);
             map.panTo(pos);
             map.setZoom(13);
