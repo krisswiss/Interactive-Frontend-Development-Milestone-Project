@@ -425,15 +425,16 @@
 function findMe() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var markerIcon = MARKER_PATH + '.png';
+            //var markerIcon = MARKER_PATH + 'A' + '.png';
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
-            function myLocationMarker(position) {
-                markerIcon(pos);
-            }
+            let marker = new google.maps.Marker({
+                position: pos,
+                map: map
+            });
 
             map.setCenter(pos);
             map.panTo(pos);
