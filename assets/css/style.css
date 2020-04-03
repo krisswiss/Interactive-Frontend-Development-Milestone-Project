@@ -1,126 +1,222 @@
-   @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap'); /*Cinzel Decorative*/
-      @import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-    body {
-    font-family: 'Roboto', cursive, sans-serif;
+html{
+    width:100%;
+    min-height:100%;
+}
+
+body {
+	font-family: 'Righteous', cursive, sans-serif;
     font-weight: bold;
-    }
+    width:100%;
+    min-height:100%;
+}
 
-    .navbar-dark {
-        background-color: #197330 !important;
-    }
-    
-    /*-------- Content -----------*/
-    .content {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    background: url('../images/general-bg2.jpg') no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-size: 23px;
-    }
+.navbar-dark {
+	background-color: #001b38 !important;
+}
 
-    #filterWrapper {
-        padding-left: 65px;
-        padding-right: 100px;
-    }
-
-    #findMe {
-        width: 100%;
-    }
-
-    .btn {
-        background-color: #17a2b8;
-    }
-
-    #or {
-        text-align: center;
-        padding-top: 15px;
-        padding-bottom: 7px;
-    }
-
-    #category {
-        padding-top: 35px;
-    }
-
-    #radioButtons {
-        padding-bottom: 20px;
-    }
-
-    #reset {
-        width: 100%;
-    }
-
-    #resetWrapper {
-        padding-bottom: 40px;
-    }
-
-    #mapContainer {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-
-    #map {
-        min-height: 500px !important;
-    }
-
-      /*------------ Results table ------------------*/
-      table {
-        font-size: 12px;
-      }
-      }
-
-      #listing {
-        position: absolute;
-        width: 200px;
-        height: 470px;
-        overflow: auto;
-        left: 442px;
-        top: 0px;
-        cursor: pointer;
-        overflow-x: hidden;
-      }
-
-      #autocomplete {
-        width: 100%;
-      }
-      #country {
-        width: 100%;
-      }
-      .placeIcon {
-        width: 20px;
-        height: 34px;
-        margin: 4px;
-      }
-      .hotelIcon {
-        width: 24px;
-        height: 24px;
-      }
-      #resultsTable {
-        border-collapse: collapse;
-        width: 240px;
-      }
-      #rating {
-        font-size: 13px;
-        font-family: Arial Unicode MS;
-      }
-      .iw_table_row {
-        height: 18px;
-      }
-      .iw_attribute_name {
-        font-weight: bold;
-        text-align: right;
-      }
-      .iw_table_icon {
-        text-align: right;
-      }
+h1 {
+    font-size: 1.5em;
+}
 
 
-  /*-------- Footer -----------*/
+/*-------- Content -----------*/
+
+.content {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background: url('../images/bg2.jpg') no-repeat top left fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-size: 23px;
+}
+
+#filterWrapper {
+	padding-left: 65px;
+	padding-right: 100px;
+}
+
+#findMe {
+	width: 100%;
+}
+
+.btn {
+    background-color: #1bbfe4;
+}
+
+.btn:hover {
+    background-color: #550d6d;
+}
+
+#or {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 7px;
+}
+
+#category {
+	padding-top: 35px;
+}
+
+#radioButtons {
+	padding-bottom: 20px;
+}
+
+#reset {
+	width: 100%;
+}
+
+#resetWrapper {
+	padding-bottom: 40px;
+}
+
+#mapContainer {
+	padding-right: 40px;
+	padding-left: 40px;
+}
+
+#map {
+	min-height: 500px !important;
+    border: 5px solid;
+}
 
 
- #follow {
-     background-color: #197330;
- }
+/*------------ Results table ------------------*/
+
+table {
+	font-size: 12px;
+}
+}
+#listing {
+	position: absolute;
+	width: 200px;
+	height: 470px;
+	overflow: auto;
+	left: 442px;
+	top: 0px;
+	cursor: pointer;
+	overflow-x: hidden;
+}
+#autocomplete {
+	width: 100%;
+}
+#country {
+	width: 100%;
+}
+.placeIcon {
+	width: 20px;
+	height: 34px;
+	margin: 4px;
+}
+.hotelIcon {
+	width: 24px;
+	height: 24px;
+}
+#resultsTable {
+	border-collapse: collapse;
+	width: 100%;
+}
+#rating {
+	font-size: 13px;
+	font-family: Arial Unicode MS;
+}
+.iw_table_row {
+	height: 18px;
+}
+.iw_attribute_name {
+	font-weight: bold;
+	text-align: right;
+}
+.iw_table_icon {
+	text-align: right;
+}
+
+/*-------- Footer -----------*/
+
+hr {
+    border-top: 1px solid;
+    background-color: #001b38;
+    width: 65%;
+}
+
+footer {
+    background-color: #001b38;
+    color: #795c08;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.general-sub {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+}
+
+.social-links {
+    padding-bottom: 10px;
+}
+
+.list-inline-item{
+    padding-right: 20px;
+}
+
+p.inline-block {
+    margin-bottom: 0px;   
+}
+
+.social-links li a i {
+    width: 45px;
+    height: 45px;
+    padding: 12px 0px;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 20px;
+    color: #001b38;
+    background: #795c08;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #550d6d;
+}
+
+#footer-details {
+    padding-top: 20px;
+}
+
+#contact-button {
+    background-color: #795c08;
+}
+
+#contact-button:hover {
+    background-color: #550d6d;
+}
+
+.contact-grid {
+    padding-top: 0.7em;
+}
+
+#copyright {
+    font-size: 1.25em;
+    padding-top: 15px;
+}
+
+/*-------- Media Querries -----------*/
+
+@media (min-width: 992px) {
+    footer {
+        min-height: 10vh;
+        max-height: 35vh;
+        }
+    .general-sub {
+    margin: 0;
+        }
+}
