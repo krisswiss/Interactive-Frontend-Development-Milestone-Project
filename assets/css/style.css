@@ -2,14 +2,14 @@
 
 html{
     width:100%;
-    min-height:100%;
+    min-height:100vh;
 }
 
 body {
 	font-family: 'Righteous', cursive, sans-serif;
     font-weight: bold;
     width:100%;
-    min-height:100%;
+    min-height:100vh;
 }
 
 .navbar-dark {
@@ -35,8 +35,8 @@ h1 {
 }
 
 #filterWrapper {
-	padding-left: 65px;
-	padding-right: 100px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #findMe {
@@ -45,10 +45,15 @@ h1 {
 
 .btn {
     background-color: #1bbfe4;
+    border-color: #001b38;
 }
 
 .btn:hover {
     background-color: #550d6d;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 #or {
@@ -61,6 +66,13 @@ h1 {
 	padding-top: 35px;
 }
 
+#autocomplete {
+	width: 100%;
+}
+#country {
+	width: 100%;
+}
+
 #radioButtons {
 	padding-bottom: 20px;
 }
@@ -70,17 +82,17 @@ h1 {
 }
 
 #resetWrapper {
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 
 #mapContainer {
-	padding-right: 40px;
-	padding-left: 40px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
 #map {
 	min-height: 500px !important;
-    border: 5px solid;
+    border: 5px solid #001b38;
 }
 
 
@@ -100,12 +112,7 @@ table {
 	cursor: pointer;
 	overflow-x: hidden;
 }
-#autocomplete {
-	width: 100%;
-}
-#country {
-	width: 100%;
-}
+
 .placeIcon {
 	width: 20px;
 	height: 34px;
@@ -178,10 +185,10 @@ p.inline-block {
     line-height: 20px;
     color: #001b38;
     background: #795c08;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 .social-links li a i:hover {
@@ -209,14 +216,33 @@ p.inline-block {
     padding-top: 15px;
 }
 
+.modal-content {
+    background: url('../images/bg2.jpg') no-repeat top right fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 /*-------- Media Querries -----------*/
 
 @media (min-width: 992px) {
+    .general-sub {
+    margin: 0;
+        }
+    #filterWrapper {
+	padding-left: 65px;
+	padding-right: 65px;
+        }
+    #mapContainer {
+	padding-right: 50px;
+	padding-left: 50px;
+        }
+}
+
+@media (min-width: 1025px) {
     footer {
         min-height: 10vh;
         max-height: 35vh;
-        }
-    .general-sub {
-    margin: 0;
         }
 }
