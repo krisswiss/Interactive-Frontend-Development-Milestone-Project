@@ -2,43 +2,46 @@
 
 Interactive-Frontend-Development-Milestone-Project
 
-The purpose of this project is to create a website that allows users to search for and indentify 4 categories within the Arts: Movie Theatre (film), Art Gallery (art), Museum (historical culture) and Library (literature).</br>
-The website make use of Google Maps API to serach and display those on the map.
-</br>
+The purpose of this project is to create a website that allows users to search and indentify 4 categories within the Arts: Movie Theatre (film), Art Gallery, Museum (historical culture) and Library (literature).</br>
+The website uses Google Maps API to search and display the categories on the map.</br>
+
 TUTORIAL:</br>
-1. Enter select a country from the dropdown menu. Notice how the map zooms in over that country.</br>
-2. Enter a city in the correct field. Notice how the cities generated are restricted within that country.</br>
+1. Enter then select a country from the dropdown menu. Notice how the map zooms in over that country.</br>
+2. Enter a city in the input field. Notice how the cities generated are restricted to the chosen country.</br>
 3. Toggle the radio buttons to change the places you are searching for within that city.</br>
-4. To revert everything and zoom out the map, press reset.</br>
-</br>
+4. To revert everything and zoom out of the map, press reset.</br>
+
 OR</br>
-1. Press "Find Me" button, which will locate the user (as long as they allow it in the browser), zoom into their location and display appropriate Art Category based on selection.</br>
+</br>
+1. Press the "Find Me" button, which will locate the user (as long as they allow it in the browser), zoom into their location and display the appropriate Art Category based on selection.</br>
 2. Toggle the radio buttons to change the places you are searching for.</br>
-3. To revert everything and zoom out the map, press reset.</br>
+3. To revert everything and zoom out of the map, press reset.</br>
 
 ## UX
 
 ### User stories
 
-As a user A, I want to find a library near me. I open Arts Antennae site, click on Find Me button and look on the map for the results.</br>
-As a user B, I want to find an Art Gallery in Paris, France. I open Arts Antennae, select France from Select Country dropdown, then input France into City search box and view the results on the map or in the table under. I have changed my mind and now preffer to watch the movie - I change Category to "Movie Theatre" and look at the results.</br>
-As a user C, I want to find Library in Warsaw. My friend told me there is one of the most famous libraries in there, but didn't tell me which country Warsaw is in. I skip "Select country" selection and just type in "Warsaw" into "Enter city" field. Map zooms in and displays the results.
-As a user D, I want to find a Museum in Berlin. I type in "Berlin" into "Enter a city" field amd look at the results. I can't find anything interesting there and I just want to look at the entire map again - I press "Reset" button - map zooms out and clears the results.</br>
+- As a user A, I want to find a library near me. I open Arts Antennae site, click on the Find Me button and look at the map for the results.</br>
+- As a user B, I want to find an Art Gallery in Paris, France. I open Arts Antennae, select France from Select Country dropdown, then input France into City search box and view the results on the map or in the table beneath. I have changed my mind and now prefer to watch a movie - I change Category to "Movie Theatre" and view the results.</br>
+- As a user C, I want to find a Library in Warsaw. My friend has told me there is one of the most famous libraries there, but didn't tell me which country Warsaw is in. I skip "Select country" selection and just type in "Warsaw" into "Enter city" field. The map zooms in and displays the results.</br>
+- As a user D, I want to find a Museum in Berlin. I type in "Berlin" into "Enter a city" field amd view the results. There is nothing there that appeals to me and I want to look at the entire map again - I press the "Reset" button - map zooms out and clears the results.</br>
 
  
 ### Strategy
-Core focus in the design was to make it as easy as possible to access information and location of selected venues on the site while striving for a simple, elegant and user-friendly design.
+The core focus in the design was to make it as easy as possible to access the information and location of selected venues on the site while striving for a simple, elegant and user-friendly design while upholding an artisic image. 
 
 ### Scope
-For those accessing the website, I wanted to provide simple, yet effective way of searching for different types of Art venues near user location and throughout the globe.
+For those accessing the website, I wanted to provide a simple, yet effective way of searching for different types of Art venues near the user's location and throughout the globe.
 
 ### Structure
-All selectable options are positioned together on the left side of the screen. Map is positioned beside it, so it's easy to change options and look at the results at the same time.</br>
+All selectable options are positioned together on the left side of the screen. The map is positioned beside it, making it easy to change options and look at the results at the simultaneously. </br>
 Additionally, all results are displayed in a table underneath, which is clickable and displays further details about the selected venue.
 
 ### Skeleton
-Information is presented in user friendly way - both on the map and as a list underneath.</br>
-Additionally, in the footer sectiom, Authors copyrights, contact form (sends email) and links to follow were added.
+Information is presented in a user friendly way - both on the map and as a list underneath.</br>
+Additionally, in the footer section, authors copyrights, contact form (sends email) and links to follow were added.</br>
+
+### Wireframes
 
 #### Desktop
 [Wireframe](https://github.com/krisswiss/Interactive-Frontend-Development-Milestone-Project/blob/master/wireframes/Desktop.jpg)</br>
@@ -50,15 +53,19 @@ Additionally, in the footer sectiom, Authors copyrights, contact form (sends ema
 
 ### Surface
 
-Despite the minimalist approach, I was hoping to reflect , hence the choice of font, colours and background image. 
+Despite the minimalist approach, I was hoping to reflect the essence of my chosen project which is to locate four categories of arts in any chosen area, hence the choice of font and background image. The colours I chose for the header and footer were to complimment the background (a palate of oil paints) without causing distraction to the viewer but to allow a popping quality of distinction while remaining harmonious.</br>
+I have chosen the satellite map type as the default as it further enhances the visual distinction while colourfully balancing the site. This defualt map type allows for a more artistically visual experience as apposed to the standard map type which in this particular case could obstruct the intended artisic appearance and therfore faith in this websites purpose, to locate artistic sites.  </br>
+However, if the user wishes to opt for the standard map type, this option is still available to them.</br>
 
 ## Technologies
 1.	HTML
 2.	CSS
 3.	Bootstrap
-4.	JavaScript.
-5.  jQuery.
-6.  EmailJS.
+4.  Font Awesome.
+5.	JavaScript.
+6.  jQuery.
+7.  EmailJS.
+8. Google Maps API.
 
 ### Existing Features:
 -	Find Me button to locate user.
