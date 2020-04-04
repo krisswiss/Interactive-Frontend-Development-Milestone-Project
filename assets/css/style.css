@@ -227,6 +227,10 @@ p.inline-block {
 /*-------- Media Querries -----------*/
 
 @media (min-width: 992px) {
+    footer {
+        min-height: 10vh;
+        max-height: 35vh;
+        }
     .general-sub {
     margin: 0;
         }
@@ -241,8 +245,5 @@ p.inline-block {
 }
 
 @media (min-width: 1025px) {
-    footer {
-        min-height: 10vh;
-        max-height: 35vh;
-        }
+    
 }
