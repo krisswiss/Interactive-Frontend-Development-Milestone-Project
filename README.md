@@ -1,35 +1,119 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Arts Antennae
 
-Welcome krisswiss,
+Interactive-Frontend-Development-Milestone-Project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+The purpose of this project is to create a website that allows users to search for and indentify 4 categories within the Arts: Movie Theatre (film), Art Gallery (art), Museum (historical culture) and Library (literature).</br>
+The website make use of Google Maps API to serach and display those on the map.
+</br>
+TUTORIAL:</br>
+1. Enter select a country from the dropdown menu. Notice how the map zooms in over that country.</br>
+2. Enter a city in the correct field. Notice how the cities generated are restricted within that country.</br>
+3. Toggle the radio buttons to change the places you are searching for within that city.</br>
+4. To revert everything and zoom out the map, press reset.</br>
+</br>
+OR</br>
+1. Press "Find Me" button, which will locate the user (as long as they allow it in the browser), zoom into their location and display appropriate Art Category based on selection.</br>
+2. Toggle the radio buttons to change the places you are searching for.</br>
+3. To revert everything and zoom out the map, press reset.</br>
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User stories
 
-`python3 -m http.server`
+As a user A, I want to find a library near me. I open Arts Antennae site, click on Find Me button and look on the map for the results.</br>
+As a user B, I want to find an Art Gallery in Paris, France. I open Arts Antennae, select France from Select Country dropdown, then input France into City search box and view the results on the map or in the table under. I have changed my mind and now preffer to watch the movie - I change Category to "Movie Theatre" and look at the results.</br>
+As a user C, I want to find Library in Warsaw. My friend told me there is one of the most famous libraries in there, but didn't tell me which country Warsaw is in. I skip "Select country" selection and just type in "Warsaw" into "Enter city" field. Map zooms in and displays the results.
+As a user D, I want to find a Museum in Berlin. I type in "Berlin" into "Enter a city" field amd look at the results. I can't find anything interesting there and I just want to look at the entire map again - I press "Reset" button - map zooms out and clears the results.</br>
 
-A blue button should appear to click: *Expose*,
+ 
+### Strategy
+Core focus in the design was to make it as easy as possible to access information and location of selected venues on the site while striving for a simple, elegant and user-friendly design.
 
-Another blue button should appear to click: *Open Browser*.
+### Scope
+For those accessing the website, I wanted to provide simple, yet effective way of searching for different types of Art venues near user location and throughout the globe.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Structure
+All selectable options are positioned together on the left side of the screen. Map is positioned beside it, so it's easy to change options and look at the results at the same time.</br>
+Additionally, all results are displayed in a table underneath, which is clickable and displays further details about the selected venue.
 
-A blue button should appear to click: *Expose*,
+### Skeleton
+Information is presented in user friendly way - both on the map and as a list underneath.</br>
+Additionally, in the footer sectiom, Authors copyrights, contact form (sends email) and links to follow were added.
 
-Another blue button should appear to click: *Open Browser*.
+#### Desktop
+[Wireframe](https://github.com/krisswiss/Interactive-Frontend-Development-Milestone-Project/blob/master/wireframes/Desktop.jpg)</br>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+#### Mobile
+[Options wireframe](https://github.com/krisswiss/Interactive-Frontend-Development-Milestone-Project/blob/master/wireframes/Mobile-1.jpg)</br>
+[Map wireframe](https://github.com/krisswiss/Interactive-Frontend-Development-Milestone-Project/blob/master/wireframes/Mobile-2.jpg)</br>
+[Footer wireframe](https://github.com/krisswiss/Interactive-Frontend-Development-Milestone-Project/blob/master/wireframes/Mobile-3.jpg)</br>
 
-## Updates Since The Instructional Video
+### Surface
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+Despite the minimalist approach, I was hoping to reflect , hence the choice of font, colours and background image. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Technologies
+1.	HTML
+2.	CSS
+3.	Bootstrap
+4.	JavaScript.
+5.  jQuery.
+6.  EmailJS.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Existing Features:
+-	Find Me button to locate user.
+-	Manual Selection through "Select coutry" dropdown and "Enter a city" field.
+-	Radio buttons to change Categories.
+-	Reset button to Reset current selection and zoom out the map.
+-	Results table: upon clicking will generate info window above the venue with more detailed information and www link to the venues website. 
+-	Contact form in footer section allow user to contact the admin of the site.
+-	Social Links icons are clickable and will bring the user to the social media profiles of the author of the site.
 
---------
+### Features left to implement:
+- In the future I would like to add directions from the users location to the venue near him/her.
+- I would also like to style results table, so each line is in different color - similar to the background image.
+- I would also like to add more Art Categories, but unfortunately, the 4 on the site are the only ones Google provides at the moment, so will have to wait for an update.
+- I would also like to change the marker icons to reflect specific types of arts based on category selection.
 
-Happy coding!
+## Testing
+I believe I have achieved my goals by providing the user with clean, simple and intuitive design, all the while representing an artistic image.</br>
+
+Information is easily accessible and easy to read.</br>
+
+The contact form has been manually tested to ensure it will not allow to submit an empty field or incorrect email address. If you try to submit the contact form with an invalid email address, there will be an error noting the invalid email address. Furthermore, the 'required' attribute is added to the 'name,' 'email,' and 'message' fields, so if those fields are not filled in, the form will not submit. If the fields are valid, the page will send the email.</br>
+
+Site has been tested for responsiveness with google inspect tool, but also on my own Laptop, tablet and mobile. In addition to this, I have shared my link with several friends, who have tested it all on different devices (Sony Z5 compact, Samsung S8, Huawei P20lite), operating systems(windows, mac os) and browsers(chrome, safari, internet explorer) and confirmed they didn’t come across any issues.</br>
+
+HTML and CSS Code has been validated in w3 validator with no major issues.</br>
+The only errors that are showing are for HTML code regarding the comments length.
+
+## Deployment
+Website is hosted using GitHub pages, deployed directly from the master branch.</br>
+In order to deploy this to GitHub Pages, I first pushed my commits to GitHub. The process for this was as follows:</br>
+1. Opened new terminal</br>
+2. Added any files to be commited with command line 'git add .'.</br>
+3. Then commited any final changes made with command line 'git commit -m "comment here"'.</br>
+4. Checked status to ensure file tree was clean with command line 'git status'.</br>
+5. Pushed files with command line 'git push'.</br>
+Changes successfully pushed to remote repository, created in the beginning of the project.</br>
+Then on the page where I view my code, and insights, there is a settings tab. I clicked into that link, an scrolled down to the section titled GitHub Pages, in which I then published my page.</br>
+My site is published at [GitHub Sites](https://krisswiss.github.io/Interactive-Frontend-Development-Milestone-Project/).</br>
+The deployed site updates automatically every time there is new commit added.</br>
+To run locally, you can clone this repository directly into the editor of your choice by pasting 'git clone https://github.com/krisswiss/Die-Antwoord-Milestone-Project.git' into your terminal.</br>
+
+## Media
+The picture for the site was taken from:</br>
+[Unsplash Pictures Library](https://unsplash.com/)
+
+## Acknowledgements
+I would like to thank:</br>
+- Mariusz Klysinski, for helping me to understand Google Maps API documentation and how to navigate and read it.</br>
+- Aaron McKenna, for pointing me in a right direction in terms of adding eventlisteners for my Find Me function.</br>
+
+The footer section code was copied from [Code Institute Resume Mini Project](https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master/17-adding-contact-form) and changed to my needs.</br>
+
+The inspiration for implementation of Google Maps API came from my partner Chakra O’Connor.</br>
+
+
+
+***This is for educational use only.***
