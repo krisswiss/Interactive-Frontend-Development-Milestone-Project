@@ -433,7 +433,7 @@ function findMe() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-
+            // Credit for lines 437-439, Aaron Sinott
             let marker = new google.maps.Marker({
                 position: pos,
                 map: map

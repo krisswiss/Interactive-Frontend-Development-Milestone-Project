@@ -19,6 +19,7 @@ function sendMail(contactForm) {
 
 function hideModalOnSubmit(contactForm) {
     $('#booking-modal').modal('hide');
+    // Credit for lines 23-25 Aaron McKenna
     contactForm.name.value = null;
     contactForm.emailaddress.value = null;
     contactForm.message.value = null;
