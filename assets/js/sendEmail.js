@@ -1,19 +1,19 @@
 function sendMail(contactForm) {
-    
+
     emailjs.send("gmail", "arts_antennae", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
         "message": contactForm.message.value
     })
-    .then(
-        function(response) {
-            console.log("SUCCESS", response);
-            hideModalOnSubmit(contactForm);
-        },
-        function(error) {
-            console.log("FAILED", error);
-        }
-    );
+        .then(
+            function (response) {
+                console.log("SUCCESS", response);
+                hideModalOnSubmit(contactForm);
+            },
+            function (error) {
+                console.log("FAILED", error);
+            }
+        );
     return false;
 }
 

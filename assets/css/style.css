@@ -20,6 +20,12 @@ h1 {
     font-size: 1.5em;
 }
 
+h2,
+h3 {
+    font-size: 23px;
+    font-weight: bold;
+}
+
 
 /*-------- Content -----------*/
 
@@ -39,7 +45,10 @@ h1 {
 	padding-right: 20px;
 }
 
-#findMe {
+#findMe,
+#autocomplete,
+#country,
+#reset {
 	width: 100%;
 }
 
@@ -50,6 +59,7 @@ h1 {
 
 .btn:hover {
     background-color: #550d6d;
+    border-color: #001b38;
     transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
@@ -63,22 +73,11 @@ h1 {
 }
 
 #category {
-	padding-top: 35px;
-}
-
-#autocomplete {
-	width: 100%;
-}
-#country {
-	width: 100%;
+	padding-top: 30px;
 }
 
 #radioButtons {
 	padding-bottom: 20px;
-}
-
-#reset {
-	width: 100%;
 }
 
 #resetWrapper {
@@ -92,14 +91,15 @@ h1 {
 
 #map {
 	min-height: 500px !important;
-    border: 5px solid #001b38;
+    border: 3px solid #001b38;
 }
 
 
 /*------------ Results table ------------------*/
 
 table {
-	font-size: 12px;
+	font-size: 15px;
+    cursor: pointer;
 }
 }
 #listing {
@@ -109,10 +109,8 @@ table {
 	overflow: auto;
 	left: 442px;
 	top: 0px;
-	cursor: pointer;
 	overflow-x: hidden;
 }
-
 .placeIcon {
 	width: 20px;
 	height: 34px;
@@ -217,7 +215,7 @@ p.inline-block {
 }
 
 .modal-content {
-    background: url('../images/bg2.jpg') no-repeat top right fixed;
+    background: url('../images/bg2.jpg') no-repeat bottom left fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -242,8 +240,4 @@ p.inline-block {
 	padding-right: 50px;
 	padding-left: 50px;
         }
-}
-
-@media (min-width: 1025px) {
-    
 }

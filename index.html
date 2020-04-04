@@ -1,282 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Arts Antennae</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+      <script type="text/javascript">
+         (function(){
+                 emailjs.init("user_ld5pqi0dZxERLSBrdmdYH");
+           })();
+      </script>
+   </head>
+   <body>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Arts Antennae</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function(){
-          emailjs.init("user_ld5pqi0dZxERLSBrdmdYH");
-	   })();
-	</script>
+      <!-----   Nav   ----------------------------------------=====----------------------------------->
 
-</head>
+      <nav class="navbar navbar-dark navbar-expand-lg bg-dark justify-content-center">
+         <!-- Brand -->
+         <a class="navbar-brand" href="#">
+            <h1>Arts Antennae</h1>
+         </a>
+      </nav>
 
-<body>
+      <!-----   Content   ---------------------------------------------------------------------------->
 
-    <!-----   Nav   --------------------------------------------------------------------------->
+      <section class="content">
+         <div class="container-fluid">
+            <div class="row">
+               <!-----   Filters   ----->
+               <div class="col-sm-12 col-xl-4" id="filterWrapper">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary" id="findMe">Find me</button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12" id="or">Or
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <h2>Select country:</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <select id="country">
+                           <option value="all" selected>All</option>
+                           <option value="at">Austria</option>
+                           <option value="be">Belgium</option>
+                           <option value="cz">Czech Republic</option>
+                           <option value="fr">France</option>
+                           <option value="de">Germany</option>
+                           <option value="gr">Greece</option>
+                           <option value="it">Italy</option>
+                           <option value="ie">Ireland</option>
+                           <option value="nl">Netherlands</option>
+                           <option value="pl">Poland</option>
+                           <option value="pt">Portugal</option>
+                           <option value="sk">Slovakia</option>
+                           <option value="es">Spain</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <h2>City:</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <input id="autocomplete" placeholder="Enter a city" type="text" />
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12" id="category">
+                        <h2>Category:</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12" id="radioButtons">
+                        <form>
+                           <input type="radio" name="option" value="gallery" id="artGallery">
+                           <span class="radio-buttons">Art Gallery</span>
+                           <br>
+                           <input type="radio" name="option" value="movie theatre" id="movieTheatre">
+                           <span class="radio-buttons">Movie Theatre</span>
+                           <br>
+                           <input type="radio" name="option" value="museum" id="museum">
+                           <span class="radio-buttons">Museum</span>
+                           <br>
+                           <input type="radio" name="option" value="library" id="library">
+                           <span class="radio-buttons">Library</span>
+                           <br>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-sm-12" id="resetWrapper">
+                        <button type="button" class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
+                     </div>
+                  </div>
+               </div>
+               <!--- ^^^  Filters close  ^^^ --->
 
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark justify-content-center">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#"><h1>Arts Antennae</h1></a>
-    </nav>
+               <!----- Map ----->
+               <div class="col-sm-12 col-xl-8" id="mapContainer">
+                  <div id="map"></div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-    <!-----   Content   --------------------------------------------------------------------------->
+      <!-----   Results table   --------------------------------------------------------------------------->
 
-    <section class="content">
+      <section class="results container-fluid">
+         
+         <div class="row">
+            <div class="col-sm-12">
+               <div id="listing">
+                  <table id="resultsTable">
+                     <tbody id="results"></tbody>
+                  </table>
+               </div>
+               <div style="display: none">
+                  <div id="info-content">
+                     <table>
+                        <tr id="iw-url-row" class="iw_table_row">
+                           <td id="iw-icon" class="iw_table_icon"></td>
+                           <td id="iw-url"></td>
+                        </tr>
+                        <tr id="iw-address-row" class="iw_table_row">
+                           <td class="iw_attribute_name">Address:</td>
+                           <td id="iw-address"></td>
+                        </tr>
+                        <tr id="iw-phone-row" class="iw_table_row">
+                           <td class="iw_attribute_name">Telephone:</td>
+                           <td id="iw-phone"></td>
+                        </tr>
+                        <tr id="iw-rating-row" class="iw_table_row">
+                           <td class="iw_attribute_name">Rating:</td>
+                           <td id="iw-rating"></td>
+                        </tr>
+                        <tr id="iw-website-row" class="iw_table_row">
+                           <td class="iw_attribute_name">Website:</td>
+                           <td id="iw-website"></td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-    <div class="container-fluid">
-    <div class="row">
-    
-    <!-----   Filters   ----->
-    <div class="col-sm-12 col-xl-4" id="filterWrapper">
-
-    <div class="row">
-      <div class="col-sm-12">
-        <button type="button" class="btn btn-primary" id="findMe">Find me</button>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12" id="or">Or
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">Select country:
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <select id="country">
-          <option value="all" selected>All</option>
-          <option value="at">Austria</option>
-          <option value="be">Belgium</option>
-          <option value="cz">Czech Republic</option>
-          <option value="fr">France</option>
-          <option value="de">Germany</option>
-          <option value="gr">Greece</option>
-          <option value="it">Italy</option>
-          <option value="ie">Ireland</option>
-          <option value="nl">Netherlands</option>
-          <option value="pl">Poland</option>
-          <option value="pt">Portugal</option>
-          <option value="sk">Slovakia</option>
-          <option value="es">Spain</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        City:
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <input id="autocomplete" placeholder="Enter a city" type="text" />
-      </div>
-    </div>
- 
-    <div class="row">
-      <div class="col-sm-12" id="category">
-        Category:
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12" id="radioButtons">
-        <form action="">
-          <input type="radio" name="option" value="gallery" id="artGallery">
-          <span class="radio-buttons">Art Gallery</span>
-          <br>
-          <input type="radio" name="option" value="movie theatre" id="movieTheatre">
-          <span class="radio-buttons">Movie Theatre</span>
-          <br>
-          <input type="radio" name="option" value="museum" id="museum">
-          <span class="radio-buttons">Museum</span>
-          <br>
-          <input type="radio" name="option" value="library" id="library">
-          <span class="radio-buttons">Library</span>
-          <br>
-        </form>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12" id="resetWrapper">
-        <button type="button" class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
-      </div>
-    </div>
-
-    </div>
-    <!--- ^^^   Filters close   ^^^ --->
-    
-    
-    <!----- Map ----->
-    <div class="col-sm-12 col-xl-8" id="mapContainer">
-      <div id="map"></div>
-    </div>
-
-    </div>
-    </div>
-
-    </section>
-
-    <!-----   Results table   --------------------------------------------------------------------------->
-  
-    <section class="results container-fluid">
-
-    <div class="row">
-    <div class="col-sm-12">
-
-    <div id="listing">
-      <table id="resultsTable">
-        <tbody id="results"></tbody>
-      </table>
-    </div>
-
-    <div style="display: none">
-      <div id="info-content">
-        <table>
-          <tr id="iw-url-row" class="iw_table_row">
-            <td id="iw-icon" class="iw_table_icon"></td>
-            <td id="iw-url"></td>
-          </tr>
-          <tr id="iw-address-row" class="iw_table_row">
-            <td class="iw_attribute_name">Address:</td>
-            <td id="iw-address"></td>
-          </tr>
-          <tr id="iw-phone-row" class="iw_table_row">
-            <td class="iw_attribute_name">Telephone:</td>
-            <td id="iw-phone"></td>
-          </tr>
-          <tr id="iw-rating-row" class="iw_table_row">
-            <td class="iw_attribute_name">Rating:</td>
-            <td id="iw-rating"></td>
-          </tr>
-          <tr id="iw-website-row" class="iw_table_row">
-            <td class="iw_attribute_name">Website:</td>
-            <td id="iw-website"></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    </div>
-    </div>
-
-    </section>
-
-    <!-----   Footer   ----------------------------------------------------------------------->
-
+      <!-----   Footer   ----------------------------------------------------------------------->
       <!----- credit for the footer: Code Institute - see MD file ----->
 
-    <footer class="container-fluid follow" id="follow">
-        <div id="footer-details" class="row">
-
+      <footer class="container-fluid follow" id="follow">
+         <div id="footer-details" class="row">
             <!----- Copyright ---->
             <div class="col-lg-4">
-                <h5 class="uppercase general-sub">Copyright</h5>
-                <hr>
-                <p class="inline-block" id="copyright"><i class="fa fa-copyright" aria-hidden="true"></i>2020 Chris Swiatek. All rights reserved.
-                </p>
+               <h3 class="uppercase general-sub">Copyright</h3>
+               <hr>
+               <p class="inline-block" id="copyright"><i class="fa fa-copyright" aria-hidden="true"></i>2020 Chris Swiatek. All rights reserved.
+               </p>
             </div>
-
             <!----- Contact ---->
             <div class="col-lg-4">
-                <h5 class="uppercase general-sub">Contact</h5>
-                <hr>
-                <div class="container-fluid">
-                    <div class="row">
-                        
-                        <!--- Contact MODAL--->
-                        
-                        <div class="col-12 contact-grid">
-                          <button class="btn btn-primary" id="contact-button" data-toggle="modal" data-target="#booking-modal">Get in touch</button>
-                          <div class="modal fade" id="booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
+               <h3 class="uppercase general-sub">Contact</h3>
+               <hr>
+               <div class="container-fluid">
+                  <div class="row">
+                     <!--- Contact MODAL--->
+                     <div class="col-12 contact-grid">
+                        <button class="btn btn-primary" id="contact-button" data-toggle="modal" data-target="#booking-modal">Get in touch</button>
+                        <div class="modal fade" id="booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                           <div class="modal-dialog modal-lg" role="document">
                               <div class="modal-content">
-                                <button type="button" class="btn btn-primary close" data-dismiss="modal">X</button>
-                                <div class="modal-body">
-                                  <div class="justify-content-center">
-                                  
-                                    <form class="booking-form" onsubmit="return sendMail(this);">
-                                      <div class="form-group">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name" required/>
-                                      </div>
-                                      <div>
-                                        <input type="email" required name="emailaddress" class="form-control" id="email" placeholder="Email"/> 
-                                      </div>
-                                      <div class="form-group">
-                                        <textarea class="form-control" name="message" id="enquiry" rows="8" placeholder="Message" required></textarea>
-                                      </div>
-                                      <div class="form-group">
-                                        <button class="btn btn-primary" type="submit">Send</button>
-                                      </div>
-                                    </form>
-
-                                  </div>
-                                </div>
+                                 <button type="button" class="btn btn-primary close" data-dismiss="modal">X</button>
+                                 <div class="modal-body">
+                                    <div class="justify-content-center">
+                                       <form class="booking-form" onsubmit="return sendMail(this);">
+                                          <div class="form-group">
+                                             <input type="text" name="name" class="form-control" id="name" placeholder="Name" required/>
+                                          </div>
+                                          <div>
+                                             <input type="email" required name="emailaddress" class="form-control" id="email" placeholder="Email"/> 
+                                          </div>
+                                          <div class="form-group">
+                                             <textarea class="form-control" name="message" id="enquiry" rows="8" placeholder="Message" required></textarea>
+                                          </div>
+                                          <div class="form-group">
+                                             <button class="btn btn-primary" type="submit">Send</button>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
                               </div>
-                            </div>
-                          </div>
+                           </div>
                         </div>
-
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-
             <!----- Social Links ----->
-
             <div class="col-lg-4">
-                <h5 class="uppercase general-sub">Follow</h5>
-                <hr>
-                <ul class="list-inline social-links">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.linkedin.com/in/chris-swiatek-ab4353178/">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <span class="sr-only">Linked In</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://github.com/krisswiss">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            <span class="sr-only">GitHub</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/chris.swiatek.963">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                </ul>
-
+               <h3 class="uppercase general-sub">Follow</h3>
+               <hr>
+               <ul class="list-inline social-links">
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://www.linkedin.com/in/chris-swiatek-ab4353178/">
+                     <i class="fa fa-linkedin" aria-hidden="true"></i>
+                     <span class="sr-only">Linked In</span>
+                     </a>
+                  </li>
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://github.com/krisswiss">
+                     <i class="fa fa-github" aria-hidden="true"></i>
+                     <span class="sr-only">GitHub</span>
+                     </a>
+                  </li>
+                  <li class="list-inline-item">
+                     <a target="_blank" href="https://www.facebook.com/chris.swiatek.963">
+                     <i class="fa fa-facebook" aria-hidden="true"></i>
+                     <span class="sr-only">Facebook</span>
+                     </a>
+                  </li>
+               </ul>
             </div>
-        </div>
-    </footer>
+         </div>
+      </footer>
 
+      <!-----   Scripts   ---->
 
-   <!-----   Scripts   ---->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRS9s-gCLVrQOvE0rkJsFGARJjXt0cdB8&libraries=places&callback=initMap" async defer></script>
+      <script src="assets/js/sendEmail.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="assets/js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRS9s-gCLVrQOvE0rkJsFGARJjXt0cdB8&libraries=places&callback=initMap" async defer></script>
-    <script src="assets/js/sendEmail.js"></script>
-
-</body>
-
+   </body>
 </html>
