@@ -1,17 +1,17 @@
 # Arts Antennae
 
-Interactive-Frontend-Development-Milestone-Project
+### Interactive-Frontend-Development-Milestone-Project
 
 The purpose of this project is to create a website that allows users to search and indentify 4 categories within the Arts: Movie Theatre (film), Art Gallery, Museum (historical culture) and Library (literature).</br>
 The website uses Google Maps API to search and display the categories on the map.</br>
 
-TUTORIAL:</br>
+#### TUTORIAL:</br>
 1. Enter then select a country from the dropdown menu. Notice how the map zooms in over that country.</br>
 2. Enter a city in the input field. Notice how the cities generated are restricted to the chosen country.</br>
 3. Toggle the radio buttons to change the places you are searching for within that city.</br>
 4. To revert everything and zoom out of the map, press reset.</br>
 
-OR</br>
+#### OR</br>
 </br>
 1. Press the "Find Me" button, which will locate the user (as long as they allow it in the browser), zoom into their location and display the appropriate Art Category based on selection.</br>
 2. Toggle the radio buttons to change the places you are searching for.</br>
@@ -65,13 +65,13 @@ However, if the user wishes to opt for the standard map type, this option is sti
 5.	JavaScript.
 6.  jQuery.
 7.  EmailJS.
-8. Google Maps API.
+8.  Google Maps API.
 
 ### Existing Features:
 -	Find Me button to locate user.
 -	Manual Selection through "Select coutry" dropdown and "Enter a city" field.
 -	Radio buttons to change Categories.
--	Reset button to Reset current selection and zoom out the map.
+-	Reset button to Reset current selection and zoom out the map. The current location marker remains present so the user can identify their current location giving the sense of clarity to the user.
 -	Results table: upon clicking will generate info window above the venue with more detailed information and www link to the venues website. 
 -	Contact form in footer section allow user to contact the admin of the site.
 -	Social Links icons are clickable and will bring the user to the social media profiles of the author of the site.
@@ -80,7 +80,14 @@ However, if the user wishes to opt for the standard map type, this option is sti
 - In the future I would like to add directions from the users location to the venue near him/her.
 - I would also like to style results table, so each line is in different color - similar to the background image.
 - I would also like to add more Art Categories, but unfortunately, the 4 on the site are the only ones Google provides at the moment, so will have to wait for an update.
-- I would also like to change the marker icons to reflect specific types of arts based on category selection.
+- I would also like to change the marker icons to reflect specific types of arts based on category selection.</br>
+
+### Unresolved bugs:
+- When Reset button is pressed it supposed to center the map on Ireland - which is the same position at which the Map is Initialized, but it doesn't fully do it.</br>
+There is no error in the console, code looks 100% correct. I tried few different approaches, but none of them worked. Issue isn't big from the user's pov, however as an author, I would like to perfect this site.</br>
+(Code line 420 in Reset function).
+
+
 
 ## Testing
 I believe I have achieved my goals by providing the user with clean, simple and intuitive design, all the while representing an artistic image.</br>
