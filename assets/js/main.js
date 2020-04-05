@@ -421,7 +421,7 @@ function reset() {
     map.setCenter(countries["ie"].center);
     map.componentRestrictions = { 'country': [] };
     place = "";
-    $("#artGallery").prop("checked", true);
+    initMap();
 }
 
 

@@ -71,7 +71,7 @@ However, if the user wishes to opt for the standard map type, this option is sti
 -	Find Me button to locate user.
 -	Manual Selection through "Select coutry" dropdown and "Enter a city" field.
 -	Radio buttons to change Categories.
--	Reset button to Reset current selection and zoom out the map. The current location marker remains present so the user can identify their current location giving the sense of clarity to the user.
+-	Reset button to Reset current selection and zoom out the map. 
 -	Results table: upon clicking will generate info window above the venue with more detailed information and www link to the venues website. 
 -	Contact form in footer section allow user to contact the admin of the site.
 -	Social Links icons are clickable and will bring the user to the social media profiles of the author of the site.
