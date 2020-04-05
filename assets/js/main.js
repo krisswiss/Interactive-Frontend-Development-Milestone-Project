@@ -8,7 +8,7 @@ var hostnameRegexp = new RegExp('^https?://.+?/');
 var countries = {
     'at': {
         center: { lat: 47.5, lng: 14.5 },
-        zoom: 6
+        zoom: 7
     },
     'be': {
         center: { lat: 50.5, lng: 4.5 },
@@ -16,7 +16,7 @@ var countries = {
     },
     'cz': {
         center: { lat: 49.8, lng: 15.5 },
-        zoom: 6
+        zoom: 7
     },
     'fr': {
         center: { lat: 46.2, lng: 2.2 },
@@ -36,7 +36,7 @@ var countries = {
     },
     'ie': {
         center: { lat: 53.4, lng: -8.2 },
-        zoom: 7
+        zoom: 6
     },
     'nl': {
         center: { lat: 52.1, lng: 5.3 },
@@ -44,15 +44,15 @@ var countries = {
     },
     'pl': {
         center: { lat: 51.9, lng: 19.1 },
-        zoom: 5
+        zoom: 6
     },
     'pt': {
         center: { lat: 39.4, lng: -8.2 },
-        zoom: 7
+        zoom: 6
     },
     'sk': {
         center: { lat: 48.7, lng: 19.7 },
-        zoom: 6
+        zoom: 7
     },
     'es': {
         center: { lat: 40.5, lng: -3.7 },
@@ -101,7 +101,7 @@ function initMap() {
     document.getElementById('findMe').addEventListener('click', findMe);
 
     // Add a DOM event listener to react when the user clicks on Reset button.
-    document.getElementById('reset').addEventListener('click', setAutocompleteCountry);
+    document.getElementById('reset').addEventListener('click', reset);
 }
 
 // When the user selects a city, get the place details for the city and
