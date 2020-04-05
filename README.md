@@ -82,14 +82,13 @@ However, if the user wishes to opt for the standard map type, this option is sti
 - I would also like to add more Art Categories, but unfortunately, the 4 on the site are the only ones Google provides at the moment, so will have to wait for an update.
 - I would also like to change the marker icons to reflect specific types of arts based on category selection.</br>
 
-### Unresolved bugs:
-- When Reset button is pressed it supposed to center the map on Ireland - which is the same position at which the Map is Initialized, but it doesn't fully do it.</br>
-There is no error in the console, code looks 100% correct. I tried few different approaches, but none of them worked. Issue isn't big from the user's pov, however as an author, I would like to perfect this site.</br>
-(Code line 420 in Reset function).
+### Resolved bugs:
+
+- When Reset button was pressed it supposed to center the map on Ireland - which is the same position at which the Map is Initialized, but it didn't fully do it.</br>
+There was no error in the console, code looed 100% correct. I tried few different approaches, but none of them worked. I thought that the problem was with Reset funtion (especially Code line 420 to center the map on Ireland), but after taking a short brake, I came back and started looking at the rest of the code to track the exact path of the function. I discovered that it was in fact one of event listeners (line 104), was associated with incorrect function. I have changed it to Reset function, which solved the problem. </br>
 
 
-
-## Testing
+## Teasting
 I believe I have achieved my goals by providing the user with clean, simple and intuitive design, all the while representing an artistic image.</br>
 
 Information is easily accessible and easy to read.</br>
