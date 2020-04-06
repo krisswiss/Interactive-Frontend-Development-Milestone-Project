@@ -87,7 +87,9 @@ However, if the user wishes to opt for the standard map type, this option is sti
 - When Reset button was pressed it supposed to center the map on Ireland - which is the same position at which the Map is Initialized, but it didn't fully do it.</br>
 There was no error in the console, code looed 100% correct. I tried few different approaches, but none of them worked. I thought that the problem was with Reset funtion (especially Code line 420 to center the map on Ireland), but after taking a short brake, I came back and started looking at the rest of the code to track the exact path of the function. I discovered that it was in fact one of event listeners (line 104), was associated with incorrect function. I have changed it to Reset function, which solved the problem. </br>
 
+### Unresolved bugs
 
+- When the page is loaded and map initialized, after selecting "Museum" or "Library" radio button, Google returns results and drops the markers on centre of the map in random location in Marocco. The code to initialize the Map has been taken from Google Maps API JS documentation and should not have any defined location at this point. I gone through and analized InitMap function provided by Google, but couldnt find a solution.</br>
 ## Testing
 I believe I have achieved my goals by providing the user with clean, simple and intuitive design, all the while representing an artistic image.</br>
 
