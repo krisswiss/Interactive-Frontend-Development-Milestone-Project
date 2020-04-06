@@ -71,7 +71,7 @@ However, if the user wishes to opt for the standard map type, this option is sti
 -	Find Me button to locate user.
 -	Manual Selection through "Select coutry" dropdown and "Enter a city" field.
 -	Radio buttons to change Categories.
--	Reset button to Reset current selection and zoom out the map. 
+-	Reset button to Reset current selection and zoom out the map. I decided to leave Location Marker present so the user has constant clarity in relation to their location. 
 -	Results table: upon clicking will generate info window above the venue with more detailed information and www link to the venues website. 
 -	Contact form in footer section allow user to contact the admin of the site.
 -	Social Links icons are clickable and will bring the user to the social media profiles of the author of the site.
@@ -88,7 +88,7 @@ However, if the user wishes to opt for the standard map type, this option is sti
 There was no error in the console, code looed 100% correct. I tried few different approaches, but none of them worked. I thought that the problem was with Reset funtion (especially Code line 420 to center the map on Ireland), but after taking a short brake, I came back and started looking at the rest of the code to track the exact path of the function. I discovered that it was in fact one of event listeners (line 104), was associated with incorrect function. I have changed it to Reset function, which solved the problem. </br>
 
 
-## Teasting
+## Testing
 I believe I have achieved my goals by providing the user with clean, simple and intuitive design, all the while representing an artistic image.</br>
 
 Information is easily accessible and easy to read.</br>

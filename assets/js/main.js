@@ -96,7 +96,12 @@ function initMap() {
 
     // Add a DOM event listener to react when the user selects a country.
     document.getElementById('country').addEventListener('change', setAutocompleteCountry);
+    document.getElementById('country').addEventListener('change', clearAutocomplete);
     
+    function clearAutocomplete(){
+        $("#autocomplete").val("");
+    }
+
     // Add a DOM event listener to react when the user clicks on Find Me button.
     document.getElementById('findMe').addEventListener('click', findMe);
 
@@ -420,9 +425,11 @@ function reset() {
     map.setZoom(2);
     map.setCenter(countries["ie"].center);
     map.componentRestrictions = { 'country': [] };
+    autocomplete.setComponentRestrictions({'country': []});
     place = "";
-    initMap();
+    $("#artGallery").prop("checked", true);
 }
+
 
 
 // Function FIND ME to locate user
