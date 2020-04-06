@@ -449,6 +449,8 @@ function findMe() {
             map.setCenter(pos);
             map.panTo(pos);
             map.setZoom(13);
+            $('#country')[0].selectedIndex = 0;
+            $("#autocomplete").val("");
 
             if ($("#artGallery").is(':checked')) {
                 searchArtGallery();
